@@ -31,3 +31,5 @@ npm config set loglevel http
 # Install favorite npm packages
 #
 cat $SELF/packages | xargs -L 1 npm i -g
+
+dots_output_success "Installed Node.js ($NODE_VERSION) and favorite npm packages."
