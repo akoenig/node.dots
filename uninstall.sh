@@ -6,4 +6,4 @@
 # Author: André König <andre.koenig@posteo.de>
 #
 
-rm -rf $HOME/.nvm
+rm -rf $HOME/.apps/nvm

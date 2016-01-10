@@ -8,15 +8,15 @@
 
 NODE_VERSION=v4.2.4
 
-if [ ! -d  $HOME/.nvm ]; then
-	dots_output_info "NVM is not installed. Installing it ..."
+mkdir -p $HOME/.apps
 
-	git clone https://github.com/creationix/nvm.git $HOME/.nvm && cd $HOME/.nvm && git checkout `git describe --abbrev=0 --tags`
+BASE=$HOME/.apps/nvm
 
-	source "$HOME/.nvm/nvm.sh"
+git clone https://github.com/creationix/nvm.git $BASE && cd $BASE && git checkout `git describe --abbrev=0 --tags`
 
-	dots_profile_add "source $HOME/.nvm/nvm.sh"
-fi
+source "$BASE/nvm.sh"
+
+dots_profile_add "source $BASE/nvm.sh"
 
 nvm install $NODE_VERSION
 nvm alias default $NODE_VERSION
