@@ -6,7 +6,7 @@
 # Author: André König <andre.koenig@posteo.de>
 #
 
-NODE_VERSION=v4
+NODE_VERSION=v6
 
 mkdir -p $HOME/.apps
 
